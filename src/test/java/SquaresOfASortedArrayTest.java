@@ -1,10 +1,8 @@
 
 
-import org.jai.pattrens.twopointers.SquaresOfASortedArray;
+import org.com.jai.pattrens.twopointers.SquaresOfASortedArray;
 import org.junit.Assert;
 import org.junit.Test;
-
-import java.util.Arrays;
 
 public class SquaresOfASortedArrayTest {
 

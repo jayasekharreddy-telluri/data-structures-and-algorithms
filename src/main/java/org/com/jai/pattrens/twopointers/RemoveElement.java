@@ -1,4 +1,4 @@
-package org.jai.pattrens.twopointers;
+package org.com.jai.pattrens.twopointers;
 
 /*
     This class provides an optimal solution to the "Remove Element" problem from LeetCode.

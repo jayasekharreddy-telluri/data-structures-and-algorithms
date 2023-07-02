@@ -1,4 +1,4 @@
-package org.jai.pattrens.twopointers;
+package org.com.jai.pattrens.twopointers;
 
 /*
         https://leetcode.com/problems/remove-duplicates-from-sorted-array/

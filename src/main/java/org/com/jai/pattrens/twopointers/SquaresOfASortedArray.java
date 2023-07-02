@@ -1,4 +1,4 @@
-package org.jai.pattrens.twopointers;
+package org.com.jai.pattrens.twopointers;
 
 import java.util.Arrays;
 
