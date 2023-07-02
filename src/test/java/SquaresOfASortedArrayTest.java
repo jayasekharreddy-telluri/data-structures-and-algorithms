@@ -1,6 +1,5 @@
 
 
-import org.com.jai.pattrens.twopointers.SquaresOfASortedArray;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,5 +1,4 @@
 
-import org.com.jai.pattrens.twopointers.RemoveElement;
 import org.junit.Assert;
 import org.junit.Test;
 
