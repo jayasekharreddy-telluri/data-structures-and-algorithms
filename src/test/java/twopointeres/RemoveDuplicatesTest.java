@@ -1,3 +1,5 @@
+package twopointeres;
+
 import org.com.jai.pattrens.twopointers.RemoveDuplicates;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

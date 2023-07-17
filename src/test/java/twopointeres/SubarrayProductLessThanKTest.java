@@ -1,3 +1,5 @@
+package twopointeres;
+
 import org.com.jai.pattrens.twopointers.SubarrayProductLessThanK;
 import org.junit.Test;
 import static org.junit.Assert.*;

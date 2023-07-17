@@ -1,4 +1,4 @@
-
+package twopointeres;
 
 import org.com.jai.pattrens.twopointers.SquaresOfASortedArray;
 import org.junit.Assert;

@@ -1,3 +1,5 @@
+package twopointeres;
+
 import org.com.jai.pattrens.twopointers.TripletSumToZero;
 import org.junit.Assert;
 import org.junit.Test;
