@@ -1,5 +1,8 @@
 package org.com.jai.pattrens.binarytree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class GetTheSumOfAllNodes {
 
     static class BinaryNode {
@@ -50,6 +53,94 @@ public class GetTheSumOfAllNodes {
         return getNumberOfLeafNodes(node.left) + getNumberOfLeafNodes(node.right);
     }
 
+    public static int getHeightOfTree(BinaryNode node) {
+
+        if (node == null) {
+
+            return -1;
+        }
+
+        return Math.max(getHeightOfTree(node.left), getHeightOfTree(node.right)) + 1;
+
+    }
+
+    public static void printAtGivenLevel(BinaryNode node, int level) {
+
+        if (node == null) {
+            return;
+        }
+        if (level == 1) {
+            System.out.print(node.value + " ");
+            return;
+        }
+        printAtGivenLevel(node.left, level - 1);
+        printAtGivenLevel(node.right, level - 1);
+    }
+
+    public static void levelOrderTraversalUsingRecurssion(BinaryNode node) {
+
+        if (node == null) {
+            return;
+        }
+
+        int height = getHeightOfTree(node);
+
+        for (int i = 0; i <= height; i++) {
+
+            printAtGivenLevel(node, i + 1);
+
+            System.out.println();
+        }
+    }
+
+    public static void levelOrderTraversalUsingQueue(BinaryNode node) {
+
+        if (node == null) {
+            return;
+        }
+
+        Queue<BinaryNode> queue = new LinkedList<>();
+
+        queue.add(node);
+
+        while (!queue.isEmpty()) {
+
+            BinaryNode presantNode = queue.remove();
+
+            System.out.print(presantNode.value + " ");
+
+            if (presantNode.left != null) {
+
+                queue.add(presantNode.left);
+            }
+
+            if (presantNode.right != null) {
+
+                queue.add(presantNode.right);
+            }
+
+        }
+
+    }
+
+
+    public static void reverseLevelOrderTraversalUsingRecurssion(BinaryNode node) {
+
+        if (node == null) {
+
+            return;
+        }
+
+        int height = getHeightOfTree(node);
+
+        for (int i = height; i >= 0; i--) {
+
+            printAtGivenLevel(node, i + 1);
+
+            System.out.println();
+        }
+    }
+
 
     public static void main(String[] args) {
 
@@ -70,11 +161,21 @@ public class GetTheSumOfAllNodes {
 
         a.root = n1;
 
-        System.out.println(getSumOfNodes(a.root));
+        //System.out.println(getSumOfNodes(a.root));
 
-        System.out.println(getNumberOfNodes(a.root));
+        //System.out.println(getNumberOfNodes(a.root));
 
-        System.out.println(getNumberOfLeafNodes(a.root));
+        //System.out.println(getNumberOfLeafNodes(a.root));
+
+        //System.out.println(getHeightOfTree(a.root));
+
+        //printAtGivenLevel(a.root, 3);
+
+        //levelOrderTraversalUsingRecurssion(a.root);
+
+        //levelOrderTraversalUsingQueue(a.root);
+
+        reverseLevelOrderTraversalUsingRecurssion(a.root);
 
 
     }
