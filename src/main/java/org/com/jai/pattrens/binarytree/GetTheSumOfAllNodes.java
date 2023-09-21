@@ -2,6 +2,7 @@ package org.com.jai.pattrens.binarytree;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class GetTheSumOfAllNodes {
 
@@ -141,6 +142,109 @@ public class GetTheSumOfAllNodes {
         }
     }
 
+    public static void reverseLevelOrderTravarselWithoutUsingRecursion(BinaryNode node) {
+
+        if (node == null) {
+
+            return;
+        }
+
+        Queue<BinaryNode> q = new LinkedList<>();
+
+        q.add(node);
+
+        Stack<BinaryNode> s = new Stack<>();
+
+        while (!q.isEmpty()) {
+
+            BinaryNode presantNode = q.remove();
+
+            if (presantNode.right != null) {
+
+                q.add(presantNode.right);
+            }
+
+            if (presantNode.left != null) {
+
+                q.add(presantNode.left);
+            }
+
+            s.add(presantNode);
+        }
+
+        while (s.size() > 0) {
+
+            System.out.print(s.pop().value + " ");
+
+        }
+
+    }
+
+
+    public static void levelOrderTraversalUsingQueueLineByLine(BinaryNode node) {
+
+        if (node == null) {
+            return;
+        }
+
+        Queue<BinaryNode> queue = new LinkedList<>();
+
+        queue.add(node);
+
+        while (true) {
+
+            int count = queue.size();
+
+            if (count == 0) {
+
+                break;
+            }
+
+            while (count > 0) {
+
+                BinaryNode presantNode = queue.remove();
+
+                System.out.print(presantNode.value + " ");
+
+                if (presantNode.left != null) {
+
+                    queue.add(presantNode.left);
+                }
+
+                if (presantNode.right != null) {
+
+                    queue.add(presantNode.right);
+                }
+
+                count--;
+            }
+
+            System.out.println();
+
+        }
+
+    }
+
+    static int maxLength = 0;
+
+    public static void leftViewOfBinaryTree(BinaryNode node, int level) {
+
+        if (node == null) {
+            return;
+        }
+
+        if (level >= maxLength) {
+
+            System.out.println(node.value);
+            maxLength++;
+        }
+
+        leftViewOfBinaryTree(node.left, level + 1);
+        leftViewOfBinaryTree(node.right, level + 1);
+
+
+    }
+
 
     public static void main(String[] args) {
 
@@ -175,7 +279,13 @@ public class GetTheSumOfAllNodes {
 
         //levelOrderTraversalUsingQueue(a.root);
 
-        reverseLevelOrderTraversalUsingRecurssion(a.root);
+        //reverseLevelOrderTraversalUsingRecurssion(a.root);
+
+        //reverseLevelOrderTravarselWithoutUsingRecursion(a.root);
+
+        //levelOrderTraversalUsingQueueLineByLine(a.root);
+
+        leftViewOfBinaryTree(a.root, 0);
 
 
     }
