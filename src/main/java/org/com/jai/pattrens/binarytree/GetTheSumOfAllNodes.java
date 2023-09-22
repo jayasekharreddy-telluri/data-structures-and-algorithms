@@ -1,4 +1,4 @@
-package org.com.jai.pattrens.binarytree;
+package com.binarytree;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -54,39 +54,39 @@ public class GetTheSumOfAllNodes {
         return getNumberOfLeafNodes(node.left) + getNumberOfLeafNodes(node.right);
     }
 
-    public static int getHeightOfTree(BinaryNode node) {
+    public static int getHeightOfTree(BinaryNode node){
 
-        if (node == null) {
+        if (node == null){
 
             return -1;
         }
 
-        return Math.max(getHeightOfTree(node.left), getHeightOfTree(node.right)) + 1;
+        return Math.max(getHeightOfTree(node.left),getHeightOfTree(node.right)) + 1;
 
     }
 
-    public static void printAtGivenLevel(BinaryNode node, int level) {
+    public static void printAtGivenLevel(BinaryNode node,int level){
 
-        if (node == null) {
+        if (node == null){
             return;
         }
-        if (level == 1) {
+        if (level == 1){
             System.out.print(node.value + " ");
             return;
         }
-        printAtGivenLevel(node.left, level - 1);
-        printAtGivenLevel(node.right, level - 1);
+        printAtGivenLevel(node.left,level - 1);
+        printAtGivenLevel(node.right,level -1);
     }
 
-    public static void levelOrderTraversalUsingRecurssion(BinaryNode node) {
+    public static void levelOrderTraversalUsingRecurssion(BinaryNode node){
 
-        if (node == null) {
+        if (node == null){
             return;
         }
 
         int height = getHeightOfTree(node);
 
-        for (int i = 0; i <= height; i++) {
+        for (int i = 0; i <= height; i++){
 
             printAtGivenLevel(node, i + 1);
 
@@ -94,9 +94,9 @@ public class GetTheSumOfAllNodes {
         }
     }
 
-    public static void levelOrderTraversalUsingQueue(BinaryNode node) {
+    public static void levelOrderTraversalUsingQueue(BinaryNode node){
 
-        if (node == null) {
+        if (node == null){
             return;
         }
 
@@ -104,18 +104,18 @@ public class GetTheSumOfAllNodes {
 
         queue.add(node);
 
-        while (!queue.isEmpty()) {
+        while (!queue.isEmpty()){
 
             BinaryNode presantNode = queue.remove();
 
             System.out.print(presantNode.value + " ");
 
-            if (presantNode.left != null) {
+            if (presantNode.left != null){
 
                 queue.add(presantNode.left);
             }
 
-            if (presantNode.right != null) {
+            if (presantNode.right != null){
 
                 queue.add(presantNode.right);
             }
@@ -125,26 +125,26 @@ public class GetTheSumOfAllNodes {
     }
 
 
-    public static void reverseLevelOrderTraversalUsingRecurssion(BinaryNode node) {
+    public static void reverseLevelOrderTraversalUsingRecurssion(BinaryNode node){
 
-        if (node == null) {
+        if (node == null){
 
             return;
         }
 
         int height = getHeightOfTree(node);
 
-        for (int i = height; i >= 0; i--) {
+        for (int i = height; i >= 0; i--){
 
-            printAtGivenLevel(node, i + 1);
+            printAtGivenLevel(node,i + 1);
 
             System.out.println();
         }
     }
 
-    public static void reverseLevelOrderTravarselWithoutUsingRecursion(BinaryNode node) {
+    public static void reverseLevelOrderTravarselWithoutUsingRecursion(BinaryNode node){
 
-        if (node == null) {
+        if (node == null){
 
             return;
         }
@@ -155,16 +155,16 @@ public class GetTheSumOfAllNodes {
 
         Stack<BinaryNode> s = new Stack<>();
 
-        while (!q.isEmpty()) {
+        while (!q.isEmpty()){
 
             BinaryNode presantNode = q.remove();
 
-            if (presantNode.right != null) {
+            if (presantNode.right != null){
 
                 q.add(presantNode.right);
             }
 
-            if (presantNode.left != null) {
+            if (presantNode.left != null){
 
                 q.add(presantNode.left);
             }
@@ -172,7 +172,7 @@ public class GetTheSumOfAllNodes {
             s.add(presantNode);
         }
 
-        while (s.size() > 0) {
+        while (s.size() > 0){
 
             System.out.print(s.pop().value + " ");
 
@@ -181,9 +181,9 @@ public class GetTheSumOfAllNodes {
     }
 
 
-    public static void levelOrderTraversalUsingQueueLineByLine(BinaryNode node) {
+    public static void levelOrderTraversalUsingQueueLineByLine(BinaryNode node){
 
-        if (node == null) {
+        if (node == null){
             return;
         }
 
@@ -191,11 +191,11 @@ public class GetTheSumOfAllNodes {
 
         queue.add(node);
 
-        while (true) {
+        while(true) {
 
             int count = queue.size();
 
-            if (count == 0) {
+            if (count == 0){
 
                 break;
             }
@@ -226,14 +226,13 @@ public class GetTheSumOfAllNodes {
     }
 
     static int maxLength = 0;
+    public static void leftViewOfBinaryTree(BinaryNode node,int level){
 
-    public static void leftViewOfBinaryTree(BinaryNode node, int level) {
-
-        if (node == null) {
+        if (node == null){
             return;
         }
 
-        if (level >= maxLength) {
+        if (level >= maxLength){
 
             System.out.println(node.value);
             maxLength++;
@@ -241,7 +240,122 @@ public class GetTheSumOfAllNodes {
 
         leftViewOfBinaryTree(node.left, level + 1);
         leftViewOfBinaryTree(node.right, level + 1);
+    }
 
+    public static void rightViewOfBinaryTree(BinaryNode node,int level){
+
+        if (node == null){
+            return;
+        }
+
+        if (level >= maxLength){
+
+            System.out.println(node.value);
+            maxLength++;
+        }
+
+        rightViewOfBinaryTree(node.right, level + 1);
+        rightViewOfBinaryTree(node.left, level + 1);
+    }
+
+    public static void inOrderTraversalWithOutRecurssion(BinaryNode node){
+
+        if (node == null){
+            return;
+        }
+        Stack<BinaryNode> stack = new Stack<>();
+
+        while (node != null){
+
+            stack.add(node);
+
+            node = node.left;
+        }
+
+        while(stack.size() > 0){
+
+            BinaryNode t = stack.pop();
+
+            System.out.println(t.value + " ");
+
+            if (t.right != null){
+
+                BinaryNode temp = t.right;
+
+                while (temp != null){
+
+                    stack.push(temp);
+
+                    temp = temp.left;
+                }
+            }
+        }
+
+    }
+
+
+    public static void preOrderTraversalWithOutRecurssion(BinaryNode node) {
+
+        if (node == null) {
+            return;
+        }
+        Stack<BinaryNode> stack = new Stack<>();
+
+        stack.add(node);
+
+        while (!stack.isEmpty()) {
+
+            BinaryNode temp = stack.pop();
+
+            System.out.print(temp.value + " ");
+
+            if (temp.right != null){
+
+                stack.add(temp.right);
+            }
+
+            if (temp.left != null){
+
+                stack.add(temp.left);
+            }
+
+        }
+
+    }
+
+
+    public static void postOrderTraversalWithOutRecurssion(BinaryNode node) {
+
+        if (node == null) {
+            return;
+        }
+        Stack<BinaryNode> stack = new Stack<>();
+
+        Stack<BinaryNode> stackTwo = new Stack<>();
+
+        stack.add(node);
+
+        while (!stack.isEmpty()) {
+
+            BinaryNode temp = stack.pop();
+
+            if (temp.left != null){
+
+                stack.add(temp.left);
+            }
+
+            if (temp.right != null){
+
+                stack.add(temp.right);
+            }
+
+            stackTwo.push(temp);
+        }
+
+        while (stackTwo.size() > 0){
+
+            System.out.print(stackTwo.pop().value + " ");
+        }
 
     }
 
@@ -285,7 +399,14 @@ public class GetTheSumOfAllNodes {
 
         //levelOrderTraversalUsingQueueLineByLine(a.root);
 
-        leftViewOfBinaryTree(a.root, 0);
+        //leftViewOfBinaryTree(a.root, 0);
+        //rightViewOfBinaryTree(a.root, 0);
+
+        //inOrderTraversalWithOutRecurssion(a.root);
+        //preOrderTraversalWithOutRecurssion(a.root);
+
+        postOrderTraversalWithOutRecurssion(a.root);
+
 
 
     }
