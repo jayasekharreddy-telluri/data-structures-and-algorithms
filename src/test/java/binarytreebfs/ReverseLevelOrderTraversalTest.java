@@ -1,7 +1,7 @@
 package binarytreebfs;
 
-import com.binarytreebfs.ReverseLevelOrderTraversal;
-import com.binarytreebfs.TreeNode;
+import org.com.jai.pattrens.binarytreebfs.ReverseLevelOrderTraversal;
+import org.com.jai.pattrens.binarytreebfs.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

@@ -1,7 +1,7 @@
 package binarytreebfs;
 
-import com.binarytreebfs.TreeNode;
-import com.binarytreebfs.ZigzagTraversal;
+import org.com.jai.pattrens.binarytreebfs.TreeNode;
+import org.com.jai.pattrens.binarytreebfs.ZigzagTraversal;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
