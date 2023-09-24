@@ -1,7 +1,7 @@
 package binarytreebfs;
 
-import com.binarytreebfs.MinimumDepthOfABinaryTree;
-import com.binarytreebfs.TreeNode;
+import org.com.jai.pattrens.binarytreebfs.MinimumDepthOfABinaryTree;
+import org.com.jai.pattrens.binarytreebfs.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

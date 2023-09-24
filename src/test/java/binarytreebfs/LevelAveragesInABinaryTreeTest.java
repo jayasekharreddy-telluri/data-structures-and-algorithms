@@ -1,7 +1,7 @@
 package binarytreebfs;
 
-import com.binarytreebfs.LevelAveragesInABinaryTree;
-import com.binarytreebfs.TreeNode;
+import org.com.jai.pattrens.binarytreebfs.LevelAveragesInABinaryTree;
+import org.com.jai.pattrens.binarytreebfs.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

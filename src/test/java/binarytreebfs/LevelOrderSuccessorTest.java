@@ -1,9 +1,10 @@
 package binarytreebfs;
 
-import com.binarytreebfs.LevelOrderSuccessor;
-import com.binarytreebfs.TreeNode;
+import org.com.jai.pattrens.binarytreebfs.LevelOrderSuccessor;
+import org.com.jai.pattrens.binarytreebfs.TreeNode;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class LevelOrderSuccessorTest {
