@@ -1,7 +1,7 @@
 package binarytreedfs;
 
-import com.binarytreebfs.TreeNode;
-import com.binarytreedfs.AllPathsForASum;
+import org.com.jai.pattrens.binarytreedfs.AllPathsForASum;
+import org.com.jai.pattrens.binarytreedfs.TreeNode;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
