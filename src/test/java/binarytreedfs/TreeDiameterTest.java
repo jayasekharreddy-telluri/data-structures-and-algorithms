@@ -1,9 +1,11 @@
-package org.com.jai.pattrens.binarytreedfs;
+package binarytreedfs;
 
+import org.com.jai.pattrens.binarytreedfs.TreeDiameter;
+import org.com.jai.pattrens.binarytreedfs.TreeNode;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertEquals;
 
 public class TreeDiameterTest {
 
