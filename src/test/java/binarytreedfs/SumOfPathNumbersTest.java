@@ -1,9 +1,11 @@
 package binarytreedfs;
 
-import com.binarytreedfs.SumOfPathNumbers;
-import com.binarytreedfs.TreeNode;
+import org.com.jai.pattrens.binarytreedfs.SumOfPathNumbers;
+import org.com.jai.pattrens.binarytreedfs.TreeNode;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class SumOfPathNumbersTest {
 
