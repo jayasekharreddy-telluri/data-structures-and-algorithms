@@ -1,6 +1,6 @@
 package binarytreedfs;
 
-import com.binarytreebfs.TreeNode;
+import org.com.jai.pattrens.binarytreedfs.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
