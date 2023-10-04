@@ -1,7 +1,9 @@
 package twoheaps;
 
-import com.twoheaps.SlidingWindowMedian;
+import org.com.jai.pattrens.twoheaps.SlidingWindowMedian;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class SlidingWindowMedianTest {
 

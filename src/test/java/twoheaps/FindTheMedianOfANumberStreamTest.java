@@ -1,7 +1,9 @@
 package twoheaps;
 
-import com.twoheaps.FindTheMedianOfANumberStream;
+import org.com.jai.pattrens.twoheaps.FindTheMedianOfANumberStream;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FindTheMedianOfANumberStreamTest {
 
