@@ -1,7 +1,9 @@
 package binarysearch;
 
-import com.binarysearch.RotationCountWithDuplicates;
+import org.com.jai.pattrens.binarysearch.RotationCountWithDuplicates;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class RotationCountWithDuplicatesTest {
 
