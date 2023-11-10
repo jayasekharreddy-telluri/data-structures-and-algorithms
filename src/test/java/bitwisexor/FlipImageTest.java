@@ -1,6 +1,6 @@
 package bitwisexor;
 
-import com.bitwisexor.FlipImage;
+import org.com.jai.pattrens.bitwisexor.FlipImage;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
