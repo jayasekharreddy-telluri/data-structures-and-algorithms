@@ -1,7 +1,9 @@
 package topkelements;
 
-import com.topkelements.KthLargestNumberInAStream;
+import org.com.jai.pattrens.topkelements.KthLargestNumberInAStream;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class KthLargestNumberInAStreamTest {
 

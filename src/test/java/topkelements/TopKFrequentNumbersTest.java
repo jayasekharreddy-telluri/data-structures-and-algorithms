@@ -1,9 +1,11 @@
 package topkelements;
 
-import com.topkelements.TopKFrequentNumbers;
+import org.com.jai.pattrens.topkelements.TopKFrequentNumbers;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TopKFrequentNumbersTest {
 

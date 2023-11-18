@@ -1,7 +1,9 @@
 package topkelements;
 
-import com.topkelements.FrequencySort;
+import org.com.jai.pattrens.topkelements.FrequencySort;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FrequencySortTest {
 
