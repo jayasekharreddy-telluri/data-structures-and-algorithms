@@ -1,9 +1,10 @@
 package KWayMerge;
 
-import com.KWayMerge.ListNode;
-import com.KWayMerge.MergeKSortedLists;
+import org.com.jai.pattrens.KWayMerge.ListNode;
+import org.com.jai.pattrens.KWayMerge.MergeKSortedLists;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class MergeKSortedListsTest {

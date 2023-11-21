@@ -1,10 +1,12 @@
 package KWayMerge;
 
-import com.KWayMerge.KthSmallestNumberInMSortedLists;
+import org.com.jai.pattrens.KWayMerge.KthSmallestNumberInMSortedLists;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.junit.Assert.assertEquals;
 
 public class KthSmallestNumberInMSortedListsTest {
 
