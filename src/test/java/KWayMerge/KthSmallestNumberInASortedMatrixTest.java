@@ -1,7 +1,9 @@
 package KWayMerge;
 
-import com.KWayMerge.KthSmallestNumberInASortedMatrix;
+import org.com.jai.pattrens.KWayMerge.KthSmallestNumberInASortedMatrix;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class KthSmallestNumberInASortedMatrixTest {
 

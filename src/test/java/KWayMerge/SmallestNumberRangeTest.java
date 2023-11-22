@@ -1,10 +1,12 @@
 package KWayMerge;
 
-import com.KWayMerge.SmallestNumberRange;
+import org.com.jai.pattrens.KWayMerge.SmallestNumberRange;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.junit.Assert.assertArrayEquals;
 
 public class SmallestNumberRangeTest {
 
