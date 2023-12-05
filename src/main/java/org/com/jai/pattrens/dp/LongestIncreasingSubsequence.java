@@ -2,6 +2,25 @@ package org.com.jai.pattrens.dp;
 
 public class LongestIncreasingSubsequence {
 
+    public static int lengthOfLIS(int[] nums) {
+        return lengthOfLISRecursive(nums, Integer.MIN_VALUE, 0);
+    }
+
+    private static int lengthOfLISRecursive(int[] nums, int prev, int currentIndex) {
+        if (currentIndex == nums.length) {
+            return 0;
+        }
+
+        int taken = 0;
+        if (nums[currentIndex] > prev) {
+            taken = 1 + lengthOfLISRecursive(nums, nums[currentIndex], currentIndex + 1);
+        }
+
+        int notTaken = lengthOfLISRecursive(nums, prev, currentIndex + 1);
+
+        return Math.max(taken, notTaken);
+    }
+
     public static int findLongestIncreasingSubsequence(int[] nums) {
 
         int[] lis = new int[nums.length];
@@ -35,6 +54,9 @@ public class LongestIncreasingSubsequence {
         int[] nums = {7, 1, 4, 8, 11, 2, 14, 3 };
 
         System.out.println(findLongestIncreasingSubsequence(nums));
+
+
+        System.out.println(lengthOfLIS(nums));
 
     }
 }

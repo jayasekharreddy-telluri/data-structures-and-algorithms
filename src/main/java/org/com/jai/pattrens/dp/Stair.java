@@ -24,7 +24,6 @@ public class Stair {
 
     public static int totalWaysToReachNthStairTopDownApproach(int[] arr, int n) {
 
-
         if (n == 0) {
 
             return 1;
@@ -41,9 +40,7 @@ public class Stair {
 
         if (arr[n] == 0) {
 
-            arr[n] = totalWaysToReachNthStairTopDownApproach(arr, n - 1) +
-                    totalWaysToReachNthStairTopDownApproach(arr, n - 2) +
-                    totalWaysToReachNthStairTopDownApproach(arr, n - 3);
+            arr[n] = totalWaysToReachNthStairTopDownApproach(arr, n - 1) + totalWaysToReachNthStairTopDownApproach(arr, n - 2) + totalWaysToReachNthStairTopDownApproach(arr, n - 3);
 
         }
         return arr[n];
@@ -54,7 +51,6 @@ public class Stair {
     public static int totalWaysToReachNthStairBottomUpApproach(int[] arr, int n) {
 
         arr[0] = 1;
-
 
         arr[1] = 1;
 
@@ -94,7 +90,7 @@ public class Stair {
 
     public static void main(String[] args) {
 
-        System.out.println(totalWaysToReachNthStair(3));
+        System.out.println(totalWaysToReachNthStair(4));
 
         int[] n = new int[4];
 
