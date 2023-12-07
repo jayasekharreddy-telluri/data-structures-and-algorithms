@@ -2,6 +2,26 @@ package org.com.jai.pattrens.dp;
 
 public class MaxSumIncreasingSubsequence {
 
+
+    public static int maxSumIncreasingSubsequenceRecursive(int[] arr,int currentIndex,int previous){
+
+        if (arr.length == currentIndex){
+
+            return 0;
+        }
+
+        int sumWithCurrent = 0;
+
+        if (arr[currentIndex] > previous){
+
+            sumWithCurrent = arr[currentIndex] + maxSumIncreasingSubsequenceRecursive(arr,currentIndex+1,arr[currentIndex]);
+        }
+
+        int sumWithoutCurrent = maxSumIncreasingSubsequenceRecursive(arr,currentIndex+1,previous);
+
+        return  Math.max(sumWithCurrent, sumWithoutCurrent);
+    }
+
     public static int maxSumIncreasingSubsequence(int[] arr){
 
         int[] msis = new int[arr.length];
@@ -34,6 +54,9 @@ public class MaxSumIncreasingSubsequence {
         int a[] = { 7, 1, 4, 8, 11, 2, 14, 3 };
 
         System.out.println(MaxSumIncreasingSubsequence.maxSumIncreasingSubsequence(a));
+
+
+        System.out.println(maxSumIncreasingSubsequenceRecursive(a,0,Integer.MIN_VALUE));
     }
 
 
