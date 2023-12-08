@@ -59,7 +59,7 @@ public class LongestCommomSubstring {
     public static void main(String[] args) {
 
         String s1 = "abd";
-        String s2 = "abca";
+        String s2 = "abcar";
 
         System.out.println(lCSubString(s1, s2, s1.length(), s2.length(), 0));
 
